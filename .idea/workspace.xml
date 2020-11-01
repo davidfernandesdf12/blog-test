@@ -80,7 +80,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../masp/masp-guia" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -93,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604257151538</updated>
-      <workItem from="1604257152565" duration="4617000" />
+      <workItem from="1604257152565" duration="13438000" />
     </task>
     <servers />
   </component>
@@ -101,17 +101,35 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604263758845">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1604263758845" />
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1604261045080">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1604261045080" />
-    <state x="410" y="136" width="666" height="522" key="find.popup" timestamp="1604258152848">
+    <state x="410" y="136" width="666" height="522" key="find.popup" timestamp="1604266367326">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="410" y="136" width="666" height="522" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1604258152848" />
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604261669217">
+    <state x="410" y="136" width="666" height="522" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1604266367326" />
+    <state x="383" y="174" key="run.anything.popup" timestamp="1604270373596">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1604261669217" />
+    <state x="383" y="174" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1604270373596" />
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604263963542">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1604263963542" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/profile/update-password-form.blade.php</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
