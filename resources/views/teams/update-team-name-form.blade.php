@@ -1,5 +1,3 @@
-{!! dd(1) !!}
-
 <x-jet-form-section submit="updateTeamName">
     <x-slot name="title">
         {{ __('Team Name') }}

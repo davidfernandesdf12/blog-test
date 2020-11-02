@@ -7,12 +7,13 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Blog Test (Laravel 6) ([Demo]())
+## Blog Test (Laravel 8) ([Demo]())
 Pacotes que foram adicionados para facilitar o desenvolvimento:
 
 * laravel-framework: [Git](https://github.com/laravel/framework) | [Docs](https://laravel.com/docs/6.x)
 * laravel-livewire: [Git](https://github.com/livewire/livewire) | [Docs](https://laravel-livewire.com/docs/2.x/quickstart)
-* spatie/laravel-tags: [Git](https://github.com/spatie/laravel-tags) | [Docs](https://spatie.be/docs/laravel-tags/v2/introduction)
+* livewire-datatables: [Git](https://github.com/spatie/laravel-tags) | [Docs](https://spatie.be/docs/laravel-tags/v2/introduction)
+* spatie/laravel-tags: [Git](https://livewire-datatables.com/) | [Docs](https://spatie.be/docs/laravel-tags/v2/introduction)
 * spatie/laravel-sluggable: [Git](https://github.com/spatie/laravel-sluggable) 
 
 ### Demo Credentials
