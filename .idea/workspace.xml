@@ -21,13 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f47ca032-2bf0-4495-9d23-7b0c2d1351a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/UsersTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/UsersTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/datatables/table-actions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/datatables/table-actions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/User/CreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/User/CreateForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user/create-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user/create-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../itau/itau-site" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -215,6 +212,8 @@
       <workItem from="1604257152565" duration="27107000" />
       <workItem from="1604338370972" duration="225000" />
       <workItem from="1604338597289" duration="21776000" />
+      <workItem from="1604404824458" duration="619000" />
+      <workItem from="1604410219018" duration="15991000" />
     </task>
     <servers />
   </component>
@@ -231,24 +230,33 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604359334050">
+    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604427867776">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1604359334050" />
-    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604338594500">
+    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1604427867776" />
+    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604425248424">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1604338594500" />
+    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1604425248424" />
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1604261045080">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1604261045080" />
-    <state x="172" y="127" width="1094" height="541" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1604377677871">
+    <state x="172" y="127" width="1094" height="541" key="VCS.FileHistoryDialog" timestamp="1604413691579">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="172" y="127" width="1094" height="541" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/72.27.1294.741@72.27.1294.741" timestamp="1604377677871" />
+    <state x="172" y="127" width="1094" height="541" key="VCS.FileHistoryDialog/72.27.1294.741@72.27.1294.741" timestamp="1604413691579" />
+    <state x="172" y="127" width="1094" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1604413691579">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="172" y="127" width="1094" height="541" key="com.intellij.history.integration.ui.views.FileHistoryDialog/72.27.1294.741@72.27.1294.741" timestamp="1604413691579" />
+    <state x="172" y="127" width="1094" height="541" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1604413691579">
+      <screen x="72" y="27" width="1294" height="741" />
+    </state>
+    <state x="172" y="127" width="1094" height="541" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/72.27.1294.741@72.27.1294.741" timestamp="1604413691579" />
     <state x="385" y="146" width="811" height="522" key="find.popup" timestamp="1604382690806">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -257,10 +265,10 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="383" y="174" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1604358606055" />
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604381986651">
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604429943570">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1604381986651" />
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1604429943570" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

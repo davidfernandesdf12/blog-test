@@ -8,6 +8,7 @@
         </h2>
     </x-slot>
 
+
     {{--    Datables Users--}}
     <div class="p-3">
         <livewire:users-table/>

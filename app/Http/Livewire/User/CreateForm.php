@@ -10,13 +10,6 @@ class CreateForm extends Component
 {
     use WithFileUploads;
 
-    /**
-     * The component's state.
-     *
-     * @var array
-     */
-    public $state = ['name', 'email', 'password', 'confirm_password'];
-
     public $name;
     public $email;
     public $password;
@@ -38,7 +31,19 @@ class CreateForm extends Component
 
         User::create($validatedData);
 
-        flash('Your request was successful!')->success()->livewire($this);
+        $this->clearForm();
+
+        flash('User created successfully!')->success()->livewire($this);
+
+        return redirect()->back();
+    }
+
+    private function clearForm(){
+        $this->name = null;
+        $this->photo = null;
+        $this->email = null;
+        $this->password = null;
+        $this->confirm_password = null;
     }
 
     public function render()
