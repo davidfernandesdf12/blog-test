@@ -20,7 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f47ca032-2bf0-4495-9d23-7b0c2d1351a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/blog-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/datatables/table-actions.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/datatables/table-actions.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user/edit-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user/edit-form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +175,7 @@
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/mattlibera/livewire-flash" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-sluggable" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jhXAGFP3j5wZIxaAHiWthZR7ig" />
@@ -177,7 +187,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../itau/itau-site" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../masp/masp-site-2020" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -208,7 +218,7 @@
       <workItem from="1604338370972" duration="225000" />
       <workItem from="1604338597289" duration="21776000" />
       <workItem from="1604404824458" duration="619000" />
-      <workItem from="1604410219018" duration="16878000" />
+      <workItem from="1604410219018" duration="23869000" />
     </task>
     <servers />
   </component>
@@ -228,14 +238,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604427867776">
+    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604444599147">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1604427867776" />
-    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604425248424">
+    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1604444599147" />
+    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl" timestamp="1604435348732">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1604425248424" />
+    <state x="530" y="125" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1604435348732" />
     <state x="208" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1604261045080">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
@@ -256,14 +266,14 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="385" y="146" width="811" height="522" key="find.popup/72.27.1294.741@72.27.1294.741" timestamp="1604382690806" />
-    <state x="383" y="174" key="run.anything.popup" timestamp="1604358606055">
+    <state x="383" y="174" key="run.anything.popup" timestamp="1604444340935">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="383" y="174" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1604358606055" />
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604429943570">
+    <state x="383" y="174" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1604444340935" />
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1604446338114">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
-    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1604429943570" />
+    <state x="382" y="89" width="672" height="678" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1604446338114" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

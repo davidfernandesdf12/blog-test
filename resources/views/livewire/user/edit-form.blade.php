@@ -1,4 +1,3 @@
-{{--{!! dd($name) !!}--}}
 <x-jet-form-section submit="submit">
     <x-slot name="title">
         {{ __('User Details') }}
@@ -41,11 +40,6 @@
         </div>
 
         {{-- Name --}}
-        <div class="row">
-            <div class="col-md-3">
-
-            </div>
-        </div>
         <div class="col-span-6 mt-2 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('*Name') }}" />
             <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model="name" autofocus />
