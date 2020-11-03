@@ -45,8 +45,14 @@ class UsersTable extends LivewireDatatable
                 ->format('d/m/Y H:i:s'),
 
 
-            Column::callback(['id'], function () {
-                return view('livewire.datatables.table-actions');
+            Column::callback(['id'], function ($id) {
+                $routeEditName = 'admin.users.edit';
+                $routeShowName = 'admin.users.show';
+                return view('livewire.datatables.table-actions', [
+                    'id' =>  $id,
+                    'routeEditName' => $routeEditName,
+                    'routeShowName' => $routeShowName
+                ]);
             })->label('View / Edit')->sortBy('id'),
 
             Column::delete()

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0f5771c080c226583607f99aac6de16",
+    "content-hash": "d0e319fe02a584655ef806f4e763f6b2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2069,6 +2069,61 @@
                 "vector"
             ],
             "time": "2020-08-28T17:11:00+00:00"
+        },
+        {
+            "name": "mattlibera/livewire-flash",
+            "version": "v0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mattlibera/livewire-flash.git",
+                "reference": "252dbbdd20491238263eba0e19682d2c21e69388"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mattlibera/livewire-flash/zipball/252dbbdd20491238263eba0e19682d2c21e69388",
+                "reference": "252dbbdd20491238263eba0e19682d2c21e69388",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^7.0|^8.0",
+                "livewire/livewire": "^1.2|^2.0",
+                "php": ">=7.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^6.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MattLibera\\LivewireFlash\\LivewireFlashServiceProvider"
+                    ],
+                    "aliases": {
+                        "LivewireFlash": "MattLibera\\LivewireFlash\\LivewireFlash"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MattLibera\\LivewireFlash\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Libera",
+                    "email": "me@mattlibera.com"
+                }
+            ],
+            "description": "Flash notifications using Livewire",
+            "time": "2020-09-10T14:54:00+00:00"
         },
         {
             "name": "mediconesystems/livewire-datatables",
