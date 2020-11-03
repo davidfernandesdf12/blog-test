@@ -21,11 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f47ca032-2bf0-4495-9d23-7b0c2d1351a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/User/CreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/User/CreateForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/user/create-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/user/create-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +208,7 @@
       <workItem from="1604338370972" duration="225000" />
       <workItem from="1604338597289" duration="21776000" />
       <workItem from="1604404824458" duration="619000" />
-      <workItem from="1604410219018" duration="15991000" />
+      <workItem from="1604410219018" duration="16878000" />
     </task>
     <servers />
   </component>
