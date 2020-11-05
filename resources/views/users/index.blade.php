@@ -10,7 +10,7 @@
 
 
     {{-- Datables Users --}}
-    <div class="p-3">
+    <div class="datables p-3">
         <livewire:users-table/>
     </div>
 

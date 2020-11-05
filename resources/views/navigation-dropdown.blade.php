@@ -24,6 +24,12 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-5 sm:flex">
+                    <x-jet-nav-link href="{{ route('admin.posts.index') }}" :active="request()->routeIs('admin.posts.index')">
+                        {{ __('Posts') }}
+                    </x-jet-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-5 sm:flex">
                     <x-jet-nav-link href="{{ route('admin.categories.index') }}" :active="request()->routeIs('admin.categories.index')">
                         {{ __('Categories') }}
                     </x-jet-nav-link>
@@ -139,6 +145,12 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
                 {{ __('Users') }}
+            </x-jet-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('admin.categories.index') }}" :active="request()->routeIs('admin.categories.index')">
+                {{ __('Categories') }}
             </x-jet-responsive-nav-link>
         </div>
 

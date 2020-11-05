@@ -14,7 +14,12 @@ class CreateUserPostsTable extends Migration
     public function up()
     {
         Schema::create('user_posts', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->unsignedBigInteger('post_id');
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('post_id')->references('id')->on('posts')->cascadeOnDelete();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->timestamps();
         });
     }
