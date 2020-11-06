@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Blog Test (Laravel 8) ([Demo]())
+## Blog Test (Laravel 8) 
 Pacotes que foram adicionados para facilitar o desenvolvimento:
 
 * laravel-framework: [Git](https://github.com/laravel/framework) | [Docs](https://laravel.com/docs/6.x)
@@ -21,7 +21,7 @@ Pacotes que foram adicionados para facilitar o desenvolvimento:
 ### Demo Credentials
 
 **Admin:** admin@admin.com  
-**Password:** secret
+**Password:** 123123
 
 ## Desenvolvimento
 O ambiente de desenvolvimento é provisionado numa VM (Virtual Machine), utilizando Vagrant + VirtualBox.
