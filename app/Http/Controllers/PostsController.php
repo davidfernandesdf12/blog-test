@@ -27,8 +27,9 @@ class PostsController extends Controller
     public function create()
     {
         $categories = Categories::all();
+        $tags = Tag::getWithType('posts')->unique('slug');
 
-        return view('posts.create', ['categories' => $categories]);
+        return view('posts.create', ['categories' => $categories, 'tags' => $tags]);
     }
 
     /**
@@ -39,12 +40,11 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-
             $validatedData = $request->validate([
                 'title' => 'required|min:4',
                 'content' => 'required|min:4',
             ]);
+
             $post = Posts::create([
                 'title' => $validatedData['title'],
                 'content' => $validatedData['content'],
@@ -62,11 +62,6 @@ class PostsController extends Controller
             flash('Post created successfully!')->success();
 
             return redirect()->back();
-        }catch (\Exception $exception) {
-            $this->error($exception);
-
-        }
-
     }
 
     /**
@@ -93,7 +88,9 @@ class PostsController extends Controller
     {
         $post = Posts::with(['categories', 'tags'])->find($id);
         $categories = Categories::all();
+
         $tags = Tag::getWithType('posts')->unique('slug');
+        $tags = $tags->diff($post->tags);
 
         return view('posts.edit', ['post' => $post, 'categories' => $categories, 'tags' => $tags]);
     }
@@ -107,7 +104,6 @@ class PostsController extends Controller
      */
     public function update(Request $request, $slug)
     {
-        try{
             $validatedData = $request->validate([
                 'title' => 'required|min:4',
                 'content' => 'required|min:4',
@@ -132,11 +128,6 @@ class PostsController extends Controller
             flash('Post updated successfully!')->success();
 
             return redirect()->back();
-
-        }catch (\Exception $exception) {
-            $this->error($exception);
-
-        }
     }
 
     /**

@@ -68,12 +68,12 @@
                                             <div class="col-md-6">
                                                 <x-jet-label for="tags" value="{{ __('Tags') }}" />
                                                 <select class="form-control" name="tags[]" id="tags" multiple="multiple">
+                                                    @foreach($post->tags as $tag)
+                                                        <option selected>{{isset($tag->name) ? $tag->name : ''}}</option>
+                                                    @endforeach
+
                                                     @foreach($tags as $tag)
-                                                        @if(!$post->withAnyTags([$tag->name], 'posts')->get()->isEmpty())
-                                                            <option selected>{{isset($tag->name) ? $tag->name : ''}}</option>
-                                                        @else
-                                                            <option>{{isset($tag->name) ? $tag->name : ''}}</option>
-                                                        @endif
+                                                        <option>{{isset($tag->name) ? $tag->name : ''}}</option>
                                                     @endforeach
 
                                                 </select>
@@ -84,8 +84,8 @@
                             </div>
 
                             <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                                <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150" id="create" onclick="myFunction()">
-                                    Create
+                                <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150" id="create">
+                                    Save
                                 </button>
                             </div>
                         </div>
@@ -107,16 +107,14 @@
                 });
             });
 
-            function myFunction(){
-                const removeElements = (elms) => elms.forEach(el => el.remove());
+            const removeElements = (elms) => elms.forEach(el => el.remove());
 
-                window.scrollTo(0, 0);
+            window.scrollTo(0, 0);
 
-                setTimeout(function(){
-                        removeElements( document.querySelectorAll(".rounded-r-md") );
-                    }
-                    , 4000 );
-            }
+            setTimeout(function(){
+                    removeElements( document.querySelectorAll(".rounded-r-md") );
+                }
+                , 4000 );
 
         </script>
 

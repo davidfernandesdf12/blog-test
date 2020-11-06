@@ -1,6 +1,5 @@
 <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-    <section>
-    </section>
+    <livewire:flash-container  />
 
     <div class="md:grid md:grid-cols-3 md:gap-6">
         <div class="md:col-span-1">
@@ -21,7 +20,7 @@
                         <div class="grid grid-cols-6 gap-6">
                             <div class="col-span-12 mt-2 sm:col-span-12">
                                 <label class="block font-medium text-sm text-gray-700" for="title">
-                                    {{ __('Title') }}
+                                    {{ __('*Title') }}
                                 </label>
                                 <input class="form-input rounded-md shadow-sm mt-1 block w-full" id="title" name="title" type="text" autofocus="autofocus">
                                 @error('title')
@@ -48,7 +47,7 @@
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <x-jet-label for="select2" value="{{ __('*Categories') }}" />
+                                    <x-jet-label for="select2" value="{{ __('Categories') }}" />
                                     <select class="form-control" name="categories[]" id="select2" multiple="multiple">
                                         @foreach($categories as $category)
                                             <option value="{{$category->id}}">{{$category->title}}</option>
@@ -58,9 +57,9 @@
                                 <div class="col-md-12 mt-2">
                                     <x-jet-label for="tags" value="{{ __('Tags') }}" />
                                     <select class="form-control" name="tags[]" id="tags" multiple="multiple">
-                                        <option selected="selected">orange</option>
-                                        <option>white</option>
-                                        <option>purple</option>
+                                        @foreach($tags as $tag)
+                                            <option>{{$tag->name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -70,7 +69,7 @@
                     </div>
 
                     <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
-                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150" id="create" onclick="myFunction()">
+                        <button type="submit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150" id="create">
                             Create
                         </button>
                     </div>
@@ -93,18 +92,14 @@
             tags: true
         });
     });
+    const removeElements = (elms) => elms.forEach(el => el.remove());
 
-    function myFunction(){
-        const removeElements = (elms) => elms.forEach(el => el.remove());
+    window.scrollTo(0, 0);
 
-        window.scrollTo(0, 0);
-
-        setTimeout(function(){
-                removeElements( document.querySelectorAll(".rounded-r-md") );
-            }
-            , 4000 );
-    }
-
+    setTimeout(function(){
+            removeElements( document.querySelectorAll(".rounded-r-md") );
+        }
+        , 4000 );
 </script>
 
 

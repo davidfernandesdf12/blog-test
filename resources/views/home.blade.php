@@ -20,7 +20,7 @@
     </head>
     <body class="home">
     <!-- Navigation -->
-    @include('menu')
+    @include('site.menu')
     <!-- Page Content -->
     <div class="container">
 
@@ -73,7 +73,7 @@
             </div>
 
             <!-- Sidebar Widgets Column -->
-            @include('sidebar')
+            @include('site.sidebar')
 
         </div>
         <!-- /.row -->
@@ -82,7 +82,7 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    @include('footer')
+    @include('site.footer')
     </body>
 
     <!-- Bootstrap core JavaScript -->
