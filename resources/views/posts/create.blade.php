@@ -12,10 +12,6 @@
 
 
 <script>
-    let editor = CKEDITOR.replace( 'content' );
-    let dataContent;
-    editor.on( 'change', function( evt ) {
-        dataContent = evt.editor.getData();
-        $("#content").val(dataContent)
-    });
+    CKEDITOR.replace( 'content' );
+
 </script>

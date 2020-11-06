@@ -16,6 +16,7 @@ Pacotes que foram adicionados para facilitar o desenvolvimento:
 * livewire-flash: [Git](https://github.com/mattlibera/livewire-flash) | [Docs](https://laravel-livewire.com/docs/2.x/flash-messages)
 * spatie/laravel-tags: [Git](https://github.com/spatie/laravel-tags) | [Docs](https://spatie.be/docs/laravel-tags/v2/introduction)
 * spatie/laravel-sluggable: [Git](https://github.com/spatie/laravel-sluggable) 
+* spatie/laravel-medialibrary: [Git](https://github.com/spatie/laravel-sluggable) [Docs](https://github.com/spatie/laravel-medialibrary)
 
 ### Demo Credentials
 

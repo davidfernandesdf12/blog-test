@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categories;
 use App\Models\Posts;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Tags\Tag;
 
 class PostsController extends Controller
@@ -40,6 +41,8 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+            $user = Auth::user();
+
             $validatedData = $request->validate([
                 'title' => 'required|min:4',
                 'content' => 'required|min:4',
@@ -50,6 +53,16 @@ class PostsController extends Controller
                 'content' => $validatedData['content'],
                 'enabled' => $request->has('enabled') ? true : false,
             ]);
+
+            if($request->has('file-Highligth')){
+                $post
+                    ->addMedia($request->file('file-Highligth'))
+                    ->toMediaCollection('posts_highlight');
+            }
+
+            if($post){
+                $user->posts()->sync([$post->id]);
+            }
 
             if($request->has('tags')){
                 $post->attachTags($request->get('tags'), 'posts');
@@ -115,6 +128,16 @@ class PostsController extends Controller
                 'content' => $validatedData['content'],
                 'enabled' => $request->has('enabled') ? true : false,
             ]);
+
+            if($request->has('file-Highligth')){
+                if(!$post->getMedia()->isEmpty()){
+                    $post->getMedia()->isEmpty()->delete();
+                }
+
+                $post
+                    ->addMedia($request->file('file-Highligth'))
+                    ->toMediaCollection('posts_highlight');
+            }
 
             if($request->has('categories')){
                 $post->categories()->sync($request->get('categories'));

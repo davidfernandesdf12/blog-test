@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="mt-5 md:mt-0 md:col-span-2">
-                    <form action="{{route('admin.posts.update', ['post' => $post->slug])}}" method="post">
+                    <form action="{{route('admin.posts.update', ['post' => $post->slug])}}" method="post" enctype="multipart/form-data">
                         {{ method_field('PUT') }}
                         @csrf
                         <div class="shadow overflow-hidden sm:rounded-md">
@@ -36,6 +36,10 @@
                                         @enderror
                                     </div>
 
+                                    <div class="form-group" >
+                                        <label for="file-Highligth" class="custom-file-input">change image Highligth</label>
+                                        <input type="file" name="file-Highligth" accept="image/png, image/jpeg">
+                                    </div>
                                     <div class="col-span-12 mt-2 sm:col-span-12">
                                         <textarea name="content">{{$post ? $post->content : ''}}</textarea>
                                         @error('content')
@@ -126,8 +130,4 @@
 
 <script>
     let editor = CKEDITOR.replace( 'content' );
-    // let dataContent = CKEDITOR.instances ['editor1'].getData('<p>dasdads</p>');
-    // editor.on( 'change', function( evt ) {
-    //     dataContent = evt.editor.getData();
-    // });
 </script>

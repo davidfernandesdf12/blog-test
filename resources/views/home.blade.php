@@ -38,7 +38,7 @@
                     @for($i = 0; $i < 9; $i++)
                         <div class="col-9 col-md-4 mb-4">
                                 <div class="card">
-                                    <img class="card-img-top" src="https://mercadodocacau.com/uploads/images/2019/07/chocolate-alivia-o-estresse-e-melhora-o-humor-mas-especialistas-fazem-alerta.jpg" alt="Card image cap">
+                                    <img class="card-img-top" src="https://veja.abril.com.br/wp-content/uploads/2018/03/economia-chocolate1.jpg?quality=70&strip=info&w=1024" alt="Card image cap">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
                                         <a href="#" class="btn btn-dark btn-card">View content</a>

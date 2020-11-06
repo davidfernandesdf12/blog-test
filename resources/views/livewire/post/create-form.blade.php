@@ -13,11 +13,12 @@
         </div>
 
         <div class="mt-5 md:mt-0 md:col-span-2">
-            <form action="{{route('admin.posts.store')}}" method="POST">
+            <form action="{{route('admin.posts.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-6">
                         <div class="grid grid-cols-6 gap-6">
+
                             <div class="col-span-12 mt-2 sm:col-span-12">
                                 <label class="block font-medium text-sm text-gray-700" for="title">
                                     {{ __('*Title') }}
@@ -28,6 +29,10 @@
                                 @enderror
                             </div>
 
+                            <div class="form-group" >
+                                <label for="file-Highligth" class="custom-file-input">image Highligth</label>
+                                <input type="file" name="file-Highligth" accept="image/png, image/jpeg">
+                            </div>
 
                             <div class="col-span-12 mt-2 sm:col-span-12">
                                 <textarea name="content"></textarea>
@@ -35,6 +40,7 @@
                                 <p class="text-sm text-red-600 mt-2">{{ $message }}</p>
                                 @enderror
                             </div>
+
 
 
                             <div class="col-span-12 mt-2 sm:col-span-12">
