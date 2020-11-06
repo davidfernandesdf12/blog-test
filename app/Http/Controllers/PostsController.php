@@ -44,8 +44,8 @@ class PostsController extends Controller
             $user = Auth::user();
 
             $validatedData = $request->validate([
-                'title' => 'required|min:4',
-                'content' => 'required|min:4',
+                'title' => 'required|min:2',
+                'content' => 'required|min:2',
             ]);
 
             $post = Posts::create([
@@ -85,10 +85,6 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-//        dd(Posts::with('tags')->find($id));
-        dd(Posts::find($id)->withAllTags(['dsdasdad'], 'posts')->get()->isEmpty());
-        dd(Posts::with('categories')->get());
-//        dd(Tag::getWithType('posts')->unique('slug'));
     }
 
     /**
@@ -118,8 +114,8 @@ class PostsController extends Controller
     public function update(Request $request, $slug)
     {
             $validatedData = $request->validate([
-                'title' => 'required|min:4',
-                'content' => 'required|min:4',
+                'title' => 'required|min:2',
+                'content' => 'required|min:2',
             ]);
             $post = Posts::where('slug', $slug)->first();
 

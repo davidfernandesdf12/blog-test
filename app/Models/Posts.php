@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Cache\TaggableStore;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -23,7 +24,9 @@ class Posts extends Model implements HasMedia
         'content',
         'enabled',
     ];
-
+    public function scopeEnabled($query){
+        return $query->where('enabled', true);
+    }
     public function getSlugOptions() : SlugOptions
     {
         return SlugOptions::create()
@@ -39,5 +42,9 @@ class Posts extends Model implements HasMedia
     public function categories()
     {
         return $this->belongsToMany(Categories::class, 'post_categories', 'post_id', 'category_id')->withTimestamps();;
+    }
+
+    public function user(){
+        return $this->belongsToMany(User::class, 'user_posts','post_id', 'user_id');
     }
 }

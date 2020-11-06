@@ -4,7 +4,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/posts/{slug}', [HomeController::class, 'postInternal'])->name('post.internal');
+
 
 Route::middleware(['auth:sanctum', 'verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', function () {
@@ -30,5 +31,3 @@ Route::middleware(['auth:sanctum', 'verified'])->prefix('admin')->name('admin.')
     Route::resource('categories', CategoriesController::class);
 
 });
-
-

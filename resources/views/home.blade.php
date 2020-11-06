@@ -30,50 +30,44 @@
             <div class="col-md-9">
 
                 <h1 class="my-4">Posts
-                    <small>All</small>
+                    <small>{{isset($category) ? $category->title : 'All'}}</small>
                 </h1>
 
                 <!-- Blog Posts -->
                 <div class="row">
-                    @for($i = 0; $i < 9; $i++)
+                    @foreach($posts as $post)
                         <div class="col-9 col-md-4 mb-4">
-                                <div class="card">
-                                    <img class="card-img-top" src="https://veja.abril.com.br/wp-content/uploads/2018/03/economia-chocolate1.jpg?quality=70&strip=info&w=1024" alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <a href="#" class="btn btn-dark btn-card">View content</a>
-                                    </div>
-                                    <div class="card-footer text-muted">
-                                        Posted on January 1, 2020 by
-                                        <a href="#">Start Bootstrap</a>
-                                    </div>
+                            <div class="card">
+                                <img class="card-img-top" src="{{$post->getFirstMediaUrl('posts_highlight') ? $post->getFirstMediaUrl('posts_highlight') : 'https://www.gocache.com.br/wp-content/plugins/accelerated-mobile-pages/images/SD-default-image.png'}}" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{isset($post->title) ? $post->title : ''}}</h5>
+                                    <a href="{{route('post.internal', ['slug' => $post->slug])}}" class="btn btn-dark btn-card">View content</a>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    Posted on {{$post->created_at->format('d F, Y')}}
+                                    <a href="#">{{!$post->user->isEmpty() ? 'by '.$post->user->first()->name : ''}}</a>
                                 </div>
                             </div>
-                    @endfor
+                        </div>
+                    @endforeach
                 </div>
 
-                <!-- Pagination -->
-                <ul class="pagination justify-content-center mb-4">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
-                    </nav>
+                <ul class="pagination mt-2 justify-content-center mb-4">
+                    {!! $posts->links() !!}
                 </ul>
-
+                @if($posts->count() ==0)
+                    <div class="alert alert-info" role="alert">
+                        No posts found
+                    </div>
+                @endif
             </div>
 
+
+
             <!-- Sidebar Widgets Column -->
-            @include('site.sidebar')
+            <div class="col-md-3">
+                @include('site.sidebar')
+            </div>
 
         </div>
         <!-- /.row -->
