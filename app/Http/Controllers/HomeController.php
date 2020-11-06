@@ -9,8 +9,10 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(Request $request){
-
-        if($request->has('category_slug')){
+        if($request->has('search')){
+            $posts = Posts::with(['user'])->enabled()->where('title', 'LIKE', '%'.$request->get('search').'%')->simplePaginate(9);
+            $category = null;
+        }else if($request->has('category_slug')){
             $category = Categories::where('slug', $request->get('category_slug'))->first();
 
             if($category)

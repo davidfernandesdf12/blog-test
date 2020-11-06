@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/posts/{slug}', [HomeController::class, 'postInternal'])->name('post.internal');
 

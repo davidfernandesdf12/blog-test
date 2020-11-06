@@ -16,8 +16,8 @@
                 </li>
             </ul>
 
-            <form class="form-inline ml-3">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline ml-3" action="{{route('home')}}">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
 
