@@ -45772,6 +45772,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/custom-blog.css":
+/*!***************************************!*\
+  !*** ./resources/css/custom-blog.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -45820,14 +45831,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
-  \***********************************************************/
+/*!*******************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/app.css ./resources/css/custom-blog.css ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /home/david/workspace/estudos/blog-test/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/david/workspace/estudos/blog-test/resources/css/app.css */"./resources/css/app.css");
+__webpack_require__(/*! /home/david/workspace/estudos/blog-test/resources/css/app.css */"./resources/css/app.css");
+module.exports = __webpack_require__(/*! /home/david/workspace/estudos/blog-test/resources/css/custom-blog.css */"./resources/css/custom-blog.css");
 
 
 /***/ })

@@ -5,12 +5,8 @@
         </h2>
     </x-slot>
 
-    <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-        <livewire:flash-container  />
-
-        <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
-            <section>
-            </section>
+        <div class="max-w-7xl mx-auto py-8 sm:px-6 lg:px-8">
+            <livewire:flash-container  />
 
             <div class="md:grid md:grid-cols-3 md:gap-6">
                 <div class="md:col-span-1">
@@ -96,7 +92,6 @@
                     </form>
                 </div>
             </div>
-        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>

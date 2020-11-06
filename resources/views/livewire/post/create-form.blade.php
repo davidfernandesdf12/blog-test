@@ -47,22 +47,21 @@
 
 
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <x-jet-label for="select2" value="{{ __('*Categories') }}" />
                                     <select class="form-control" name="categories[]" id="select2" multiple="multiple">
                                         @foreach($categories as $category)
                                             <option value="{{$category->id}}">{{$category->title}}</option>
                                         @endforeach
                                     </select>
-
-                                    <div class="col-md-6">
-                                        <x-jet-label for="tags" value="{{ __('Tags') }}" />
-                                        <select class="form-control" name="tags[]" id="tags" multiple="multiple">
-                                            <option selected="selected">orange</option>
-                                            <option>white</option>
-                                            <option>purple</option>
-                                        </select>
-                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <x-jet-label for="tags" value="{{ __('Tags') }}" />
+                                    <select class="form-control" name="tags[]" id="tags" multiple="multiple">
+                                        <option selected="selected">orange</option>
+                                        <option>white</option>
+                                        <option>purple</option>
+                                    </select>
                                 </div>
                             </div>
 
