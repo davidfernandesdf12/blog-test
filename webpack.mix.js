@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 
+mix.stylus
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -16,4 +17,9 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ])
+
+mix.js('resources/js/custom-blog.js', 'public/js')
+    .postCss('resources/css/custom-blog.css', 'public/css', [
+    ])
+
     .webpackConfig(require('./webpack.config'));

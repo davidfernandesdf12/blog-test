@@ -37,6 +37,8 @@
 
         @stack('modals')
 
+        {{-- CKEDITOR --}}
+        <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
         @livewireScripts
     </body>
 </html>
