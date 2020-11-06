@@ -43,7 +43,6 @@ Caso queria maior facilicade de instalação da VM, faça a instalação com [La
 *     Migrações integradas para criar as tabelas do banco de dados: php artisan migrate
 *     Propagando o banco de dados: php artisan db:seed
 *     Vinculação de pastas publicas: php artisan storage:link
-*     Execução de conjutos de testes(não obrigatório, mas será útil para ver a quantidade de testes aprovados)  : phpunit
                                      
                                  
                              
