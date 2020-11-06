@@ -13,6 +13,7 @@ class CreateForm extends Component
     public $title;
     public $enabled;
     public $categories;
+    public $tags;
 
     public function render()
     {

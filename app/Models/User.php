@@ -59,4 +59,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function posts()
+    {
+        return $this->belongsToMany(Categories::class, 'user_posts', 'user_id', 'post_id')->withTimestamps();;
+    }
 }

@@ -7,33 +7,6 @@
     </x-slot>
 
     <x-slot name="form">
-        <div x-data="{photoName: null, photoPreview: null}" class="col-span-6 sm:col-span-4">
-
-            <!-- Profile Photo File Input -->
-            <input type="file" class="hidden"
-                   wire:model="photo"
-                   x-ref="photo"
-                   x-on:change="
-                            photoName = $refs.photo.files[0].name;
-                            const reader = new FileReader();
-                            reader.onload = (e) => {
-                                photoPreview = e.target.result;
-                            };
-                            reader.readAsDataURL($refs.photo.files[0]);
-                            " />
-
-            <!-- New Profile Photo Preview -->
-            <div class="mt-2" x-show="photoPreview">
-                    <span class="block rounded-full w-20 h-20"
-                          x-bind:style="'background-size: cover; background-repeat: no-repeat; background-position: center center; background-image: url(\'' + photoPreview + '\');'">
-                    </span>
-            </div>
-
-            <x-jet-secondary-button class="mt-2 mr-2" type="button" x-on:click.prevent="$refs.photo.click()">
-                {{ __('Select Photo') }}
-            </x-jet-secondary-button>
-        </div>
-
         {{-- Name --}}
         <div class="col-span-6 mt-2 sm:col-span-4">
             <x-jet-label for="name" value="{{ __('*Name') }}" />

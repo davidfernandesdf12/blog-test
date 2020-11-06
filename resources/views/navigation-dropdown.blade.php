@@ -149,6 +149,12 @@
         </div>
 
         <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('admin.posts.index') }}" :active="request()->routeIs('admin.posts.index')">
+                {{ __('Posts') }}
+            </x-jet-responsive-nav-link>
+        </div>
+
+        <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('admin.categories.index') }}" :active="request()->routeIs('admin.categories.index')">
                 {{ __('Categories') }}
             </x-jet-responsive-nav-link>

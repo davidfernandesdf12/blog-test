@@ -28,4 +28,9 @@ class Categories extends Model
     {
         return 'slug';
     }
+
+    public function posts()
+    {
+        return $this->belongsToMany(Posts::class, 'post_categories', 'category_id', 'post_id')->withTimestamps();;
+    }
 }

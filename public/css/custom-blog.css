@@ -3,6 +3,30 @@
     padding-top: 56px;
     background-color: #e0e0e0d9;
 }
+.card-img-top{
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    height: 200px;
+    -o-object-fit: unset;
+       object-fit: unset;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.image-highlight {
+    width: 70%;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+}
+
+.navbar-collapse li{
+    text-align: center;
+}
 
 @media screen and (max-width: 800px) {
     .card-body .btn-primary {

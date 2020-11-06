@@ -14,7 +14,6 @@ class CreateForm extends Component
     public $email;
     public $password;
     public $confirm_password;
-    public $photo;
 
     protected $rules = [
         'name' => 'required|min:4',
@@ -29,7 +28,7 @@ class CreateForm extends Component
 
         $validatedData['password'] = bcrypt($validatedData['password']);
 
-        User::create($validatedData);
+        $user = User::create($validatedData);
 
         $this->clearForm();
 

@@ -9,7 +9,7 @@
     </x-slot>
 
     {{-- Datables Categories --}}
-    <div class="p-3">
+    <div class="datables p-3">
         <livewire:category.categories-table/>
     </div>
 

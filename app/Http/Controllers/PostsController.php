@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Categories;
 use App\Models\Posts;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Spatie\Tags\Tag;
 
 class PostsController extends Controller
@@ -27,8 +28,9 @@ class PostsController extends Controller
     public function create()
     {
         $categories = Categories::all();
+        $tags = Tag::getWithType('posts')->unique('slug');
 
-        return view('posts.create', ['categories' => $categories]);
+        return view('posts.create', ['categories' => $categories, 'tags' => $tags]);
     }
 
     /**
@@ -39,17 +41,28 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        try {
+            $user = Auth::user();
 
             $validatedData = $request->validate([
-                'title' => 'required|min:4',
-                'content' => 'required|min:4',
+                'title' => 'required|min:2',
+                'content' => 'required|min:2',
             ]);
+
             $post = Posts::create([
                 'title' => $validatedData['title'],
                 'content' => $validatedData['content'],
                 'enabled' => $request->has('enabled') ? true : false,
             ]);
+
+            if($request->has('file-Highligth')){
+                $post
+                    ->addMedia($request->file('file-Highligth'))
+                    ->toMediaCollection('posts_highlight');
+            }
+
+            if($post){
+                $user->posts()->sync([$post->id]);
+            }
 
             if($request->has('tags')){
                 $post->attachTags($request->get('tags'), 'posts');
@@ -62,11 +75,6 @@ class PostsController extends Controller
             flash('Post created successfully!')->success();
 
             return redirect()->back();
-        }catch (\Exception $exception) {
-            $this->error($exception);
-
-        }
-
     }
 
     /**
@@ -77,10 +85,6 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-//        dd(Posts::with('tags')->find($id));
-        dd(Posts::find($id)->withAllTags(['dsdasdad'], 'posts')->get()->isEmpty());
-        dd(Posts::with('categories')->get());
-//        dd(Tag::getWithType('posts')->unique('slug'));
     }
 
     /**
@@ -93,7 +97,9 @@ class PostsController extends Controller
     {
         $post = Posts::with(['categories', 'tags'])->find($id);
         $categories = Categories::all();
+
         $tags = Tag::getWithType('posts')->unique('slug');
+        $tags = $tags->diff($post->tags);
 
         return view('posts.edit', ['post' => $post, 'categories' => $categories, 'tags' => $tags]);
     }
@@ -107,10 +113,9 @@ class PostsController extends Controller
      */
     public function update(Request $request, $slug)
     {
-        try{
             $validatedData = $request->validate([
-                'title' => 'required|min:4',
-                'content' => 'required|min:4',
+                'title' => 'required|min:2',
+                'content' => 'required|min:2',
             ]);
             $post = Posts::where('slug', $slug)->first();
 
@@ -119,6 +124,16 @@ class PostsController extends Controller
                 'content' => $validatedData['content'],
                 'enabled' => $request->has('enabled') ? true : false,
             ]);
+
+            if($request->has('file-Highligth')){
+                if(!$post->getMedia()->isEmpty()){
+                    $post->getMedia()->isEmpty()->delete();
+                }
+
+                $post
+                    ->addMedia($request->file('file-Highligth'))
+                    ->toMediaCollection('posts_highlight');
+            }
 
             if($request->has('categories')){
                 $post->categories()->sync($request->get('categories'));
@@ -132,11 +147,6 @@ class PostsController extends Controller
             flash('Post updated successfully!')->success();
 
             return redirect()->back();
-
-        }catch (\Exception $exception) {
-            $this->error($exception);
-
-        }
     }
 
     /**
