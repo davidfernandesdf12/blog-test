@@ -18,7 +18,7 @@ Pacotes que foram adicionados para facilitar o desenvolvimento:
 * spatie/laravel-sluggable: [Git](https://github.com/spatie/laravel-sluggable) 
 * spatie/laravel-medialibrary: [Git](https://github.com/spatie/laravel-sluggable) [Docs](https://github.com/spatie/laravel-medialibrary)
 
-### Demo Credentials
+### Credenciais Admin
 
 **Admin:** admin@admin.com  
 **Password:** 123123
@@ -34,7 +34,7 @@ Para rodar em ambiente local será necessario a instalação dos seguintes softw
 Caso queria maior facilicade de instalação da VM, faça a instalação com [Laravel Homestead](https://laravel.com/docs/8.x/homestead) 
 
 #### 2) Configuração 
-1. Você deve gerar um arquivo .env com os parâmetros exemplificado no arquivo .env.exemple, preencha os parâmetros acordo com suas configurções de ambiente, para maior facilidade rode: cp .env.example .env  
+1. Você deve gerar um arquivo .env com os parâmetros exemplificado no arquivo .env.exemple, preencha os parâmetros de acordo com suas configurções de ambiente, para maior facilidade rode: cp .env.example .env  
 2. Com a VM ja instalada e configurada, você deve logar no vagrant com o comando vagrant ssh, acesse ate a raiz do seu projeto e rode os seguintes comandos:
 *     Atualizar composer: composer self-update
 *     Instalação de pacotes PHP: composer install
